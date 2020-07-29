@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Velo'v : location de vélos à Lyon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+</head>
+
+<body>
+	<header>
+		<!-- En-tête du site web -->
+		<div id="logo">
+			<img src= "Images/Logo_Velov.gif" alt="logo de l'agence de location de vélos à Lyon Velo'v"/>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#Accueil"> ACCUEIL </a></li>
+				<li><a href="#Fonctionnement"> FONCTIONNEMENT </a></li>
+				<li><a href="#Louer son Velo'v"> LOUER SON VELO'V</a></li>
+				<li><a href="#Ses réservations"> SES RESERVATIONS</a></li>
+			</ul>
+		</nav>
+		<!-- Fin de l'en-tête du site web -->
+	</header>
+<section id= "slider">
+		<div class="titre_slider">
+		<!-- Partie slider-->
+			<h1 id= "titre_fonctionnement"> FONCTIONNEMENT </h1>
+		</div>
+		<div class= "contener_slideshow">
+			<div class="contener_slide">
+				<div class= "slid_1">
+					<div class="informations_slid_1">
+						<h1>Bienvenue sur Velo'v</h1>
+						<p>Le service de location de vélos de la ville de Lyon</p>
+					</div>
+					<div class="image_slid_1">
+						<img src="Images/Velos.jpg"/>
+					</div>
+				</div>
+				<div class="slid_2">
+					<div class="informations_slid_2">
+						<p>Cliquez sur la carte et choisissez votre station de vélos</p>
+					</div>
+					<div class="image_slid_2">
+						<img src="Images/carte-lyon.png"/>
+					</div>
+				</div>
+				<div class="slid_3">
+					<div class="informations_slid_3">
+						<p>Réservez votre vélo et signez</p>
+					</div>
+					<div class=image_slid_3>
+						<img src="Images/Lyon2.jpg">
+					</div>
+				</div>
+				<div class="slid_4">
+					<div class="informations_slid_4">
+						<p>Consultez l'état de votre réservation en bas de page</p>
+					</div>
+					<div class="image_slid_4">
+						<img src="Images/Lyon3.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="fleches_slider">
+				<span class ="fleche_gauche"><a class="fa fa-angle-left"></a></span>
+				<span class= "fleche_droite"><a class="fa fa-angle-right"></a></span>
+			</div>
+		</div>
+</section>
+
+<div id="mapid" style="width : 600px ; height : 400px;"></div>
+
+<script>
+	
+	var mymap = L.map('mapid').setView([45.756266, 4.837418], 13);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+	maxZoom: 18,
+	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+		'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	id: 'mapbox/streets-v11',
+	tileSize: 512,
+	zoomOffset: -1
+}).addTo(mymap);
+
+var popup = L.popup();
+
+function onMapClick(e) {
+	popup
+		.setLatLng(e.latlng)
+		.setContent("You clicked the map at " + e.latlng.toString())
+		.openOn(mymap);
+}
+mymap.on('click', onMapClick);
+</script>
+<script src="ajax.js"></script>
+</body>
