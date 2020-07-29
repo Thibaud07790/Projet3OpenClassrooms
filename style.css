@@ -1,0 +1,216 @@
+@font-face
+{
+	font-family : 'coolvetica';
+	src : url('Fonts/coolvetica/coolvetica rg.ttf') format('truetype');
+}
+
+@font-face
+{
+	font-family: 'FontAwesome';
+	src: url('Fonts/fontawesome-webfont.eot') format('eot'),
+	url('Fonts/fontawesome-webfont.svg') format('svg'),
+	url('Fonts/fontawesome-webfont.ttf') format('truetype'),
+	url('Fonts/fontawesome-webfont.woff') format('woff');
+}
+
+header
+{
+
+	display: flex;
+	justify-content: space-between;
+	width : 100%;
+	left : 0;
+}
+
+#logo
+{
+
+	margin-left : 50px;
+}
+
+nav
+{
+
+	margin-top : 50px;
+	margin-right: 20px;
+}
+
+nav ul
+{
+
+	font-family: 'coolvetica', Arial, serif;
+	display: flex;
+	font-size : 20px;
+}
+
+nav ul li
+{
+
+	margin-left: 20px;
+	list-style-type: none;
+}
+
+nav ul li a
+{
+
+	text-decoration: none;
+	color : black;
+}
+
+nav ul li a:hover
+{
+
+	color : red;
+}
+
+.titre_slider
+{
+
+	margin-left: 50px;
+}
+
+.titre_slider h1
+{
+
+	font-family: 'coolvetica', Arial, serif;
+	font-size : 25px;
+	color : red;
+	font-weight: initial;
+}
+
+.image_slid_1 img
+{
+ 	height : 320px;
+ 	width : 420px;
+}
+
+.slid_1
+{
+
+	display : flex;
+	justify-content: space-around;
+	width : 100%;
+}
+
+.informations_slid_1
+{
+	margin-top: 180px;
+
+}
+
+.informations_slid_1 h1
+{
+	font-family : 'coolvetica', Arial, serif;
+	font-size : 25px;
+	color : red;
+	font-weight : initial;
+}
+
+.informations_slid_1 p
+{
+
+	font-family : 'coolvetica', Arial, serif;
+	font-size: 20px;
+	color : black;
+
+}
+
+.slid_2
+{
+
+	display : flex;
+	justify-content: space-around;
+}
+
+.informations_slid_2
+{
+
+	margin-top : 180px;
+
+}
+
+.informations_slid_2 p
+{
+	font-family : 'coolvetica', Arial, serif;
+	font-size : 20px;
+	color : red;
+	font-weight : initial;
+
+}
+
+.image_slid_2 img
+{
+ 	height : 320px;
+ 	width : 420px;
+}
+
+.slid_3
+{
+
+	display : flex;
+	justify-content: space-around;
+}
+
+.informations_slid_3
+{
+
+	margin-top : 180px;
+}
+
+.informations_slid_3 p
+{
+
+	font-family : 'coolvetica', Arial, serif;
+	font-size : 20px;
+	color : red;
+	font-weight : initial;
+}
+
+.image_slid_3 img
+{
+	height : 320px;
+	width : 420px;
+
+}
+
+#mapid 
+{ 
+	height: 180px;
+}
+
+.fa-angle-left::before
+{
+
+	font-family: 'FontAwesome';
+	content : "\f104";
+}
+
+.fleche_gauche
+{
+
+	background-color : rgba(255,255,255,0);
+	padding : 22px;
+	left : 0px;
+}
+
+.fa-angle-right::before
+{
+	font-family: 'FontAwesome';
+	content : "\f105";
+}
+
+.fleche_droite
+{
+
+	background-color : rgba(255,255,255,0);
+	padding : 22px;
+	right : 0px;
+}
+
+.fleche_gauche, .fleche_droite
+{
+
+	cursor : pointer;
+	font-size: 50px;
+	color : red;
+}
