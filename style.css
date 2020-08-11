@@ -173,6 +173,35 @@ nav ul li a:hover
 
 }
 
+.slid_4
+{
+
+	display : flex;
+	justify-content: space-around;
+}
+
+.informations_slid_4
+{
+
+	margin-top : 180px;
+}
+
+.informations_slid_4 p
+{
+
+	font-family : 'coolvetica', Arial, serif;
+	font-size : 20px;
+	color : red;
+	font-weight : initial;
+}
+
+.image_slid_4 img
+{
+	height : 320px;
+	width : 420px;
+
+}
+
 #mapid 
 { 
 	height: 180px;
